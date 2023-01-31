@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/paginate.css">
+    <link rel="stylesheet" href="css/ligne.css">
+    <script type="text/javascript" src="js/paginate.js"></script>
+
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        .btn{
+            align-items: left;
+            font-family: "Roboto", sans-serif;
+            text-transform: uppercase;
+            outline: 0;
+            background: #6e54a5;
+            margin-left: 30%;
+            width: 20%;
+            border: 0;
+            padding: 15px;
+            color: #0e0d0e;
+            font-size: 20px;
+            -webkit-transition: all 0.3 ease;
+            transition: all 0.3 ease;
+            cursor: pointer;
+        }
+        .btn:hover,.btn:active,.btn:focus {
+                background: #4c3bc8;
+        }
+        
+        
+    </style>
+</head>
+<body>
+<div class="container">
+    <div>
+        <h1>Graphs and Tables with Pagination and filters</h1>
+        
+    </div>
+    <div class="panel">
+        <div class="body">
+            <div class="input-group">
+                <label for="searchBox">Filter</label>
+                <input type="search" id="searchBox" placeholder="Filtrar...">
+            </div>
+        </div>
+    </div>
+    <table class="myTable table hover">
+        <tbody>
+        <tr>
+            <th>USER ID</th>
+            <th>ID</th>
+            <th>TITTLE</th>
+            <th>COMPLETED</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>delectus aut autem</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>quis ut nam facilis et officia qui</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>3</td>
+            <td>fugiat veniam minus</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>4</td>
+            <td>et porro tempora</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>5</td>
+            <td>laboriosam mollitia et enim quasi adipisci quia provident illum</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>6</td>
+            <td>qui ullam ratione quibusdam voluptatem quia omnis</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>7</td>
+            <td>illo expedita consequatur quia in</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>8</td>
+            <td>quo adipisci enim quam ut ab</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>9</td>
+            <td>molestiae perspiciatis ipsa</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>10</td>
+            <td>illo est ratione doloremque quia maiores aut</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>11</td>
+            <td>vero rerum temporibus dolor</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>12</td>
+            <td>ipsa repellendus fugit nisi</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>13</td>
+            <td>et doloremque nulla</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>14</td>
+            <td>repellendus sunt dolores architecto voluptatum</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>15</td>
+            <td>ab voluptatum amet voluptas</td>
+            <td></td>
+        </tr>
+    
+        
+        </tbody>
+    </table>
+    
+</div>
+<a href="../index.html">
+    <button class="btn">Log out</button>
+</a>
+<script>
+
+    let options = {
+        numberPerPage:5, //Cantidad de datos por pagina
+        goBar:true, //Barra donde puedes digitar el numero de la pagina al que quiere ir
+        pageCounter:true, //Contador de paginas, en cual estas, de cuantas paginas
+    };
+
+    let filterOptions = {
+        el:'#searchBox' //Caja de texto para filtrar, puede ser una clase o un ID
+    };
+
+    paginate.init('.myTable',options,filterOptions);
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+
+</head>
+<body>
+    <div class="login-page">
+        <div class="form">
+          <form class="login-form" action="post">
+            <h1>User Login</h1>
+            <input type="text" placeholder="username" id="login" value="admin" required/>
+            <input type="password" placeholder="password" id="password" value="admin" required/>
+            <button onclick="checkLoginPass(event)">login</button>
+            <p class="message">Not registered? <a href="Register.html">Create an account</a></p>
+          </form>
+        </div>
+      </div>
+      <script>
+        var checkLoginPass = function () {
+        event.preventDefault();
+        var login = document.getElementById("login").value;
+        var pass = document.getElementById("password").value;
+        if (login === "admin" && pass === "admin") {
+          window.location.replace("./dashboard/dashboard.html");
+            alert("login successfully");
+        }
+        else {
+              alert("Login Failed")
+              return false;
+        }
+      };
+      </script>
+</body>
+</html>
+
